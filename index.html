@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fit-to-Print</title>
+
+  <script src='api_calls.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <link rel="icon" type="image/png" href="https://www.google.com/s2/favicons?domain=css-tricks.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">  
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Loader -->
+  <div class="loader hidden">
+    <h1 class="ml5">      
+      <span class="text-wrapper">            
+        <span class="line line1"></span>
+        <span class="letters letters-left">Fit</span>
+        <span class="letters ampersand">To</span>
+        <span class="letters letters-right">Print</span>
+        <span class="line line2"></span>
+      </span>
+    </h1>
+  </div>
+<!-- Main Container -->
+  <div class="container">
+      <!-- Header -->
+      <div class="navBar" id="navBar">
+        <span class="name" id="name" onclick=(newsSummary())>Fit<span id="to">To</span>Print</span>
+        <div class="nav-button-container">
+          <button id="most_pop"><span id="top">T</span>op <span id="sto">S</span>tories</button>          
+          <form class="searchInput" id="searchInputField">
+            <input type="text" placeholder="Search.." name="search" id="search-word">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+      </div>
+      <!-- News Container -->
+      <div class="news-container" id="news-container">        
+        <!-- Top container -->
+        <div class="rows" id="top-row"></div>        
+        <!-- Middle container -->
+        <div class="rows" id="middle-row"></div>        
+        <!-- Bottom News container scroll -->
+        <div class="rows" id="bottom-row">
+          <div class="overlay" id="overlay"></div>
+        </div>
+      </div>    
+      <!-- END News Container -->  
+  </div>  
+
+  <!-- Script -->
+  <script src='script.js'></script>
+  <script src="logo_animation.js"></script>
+  
+</body>
+</html>
