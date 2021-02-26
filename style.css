@@ -49,6 +49,7 @@ body {
   position: relative;
   font-weight: 300;
   font-size: 4.5em;
+  color:  rgb(4, 1, 73);
   background-image: url('green-dust-and-scratches.png');
 }
 
@@ -153,7 +154,7 @@ form.searchInput input[type=text] {
   font-size: 17px;
   font-family: Baskerville, serif;
   border: 0;
-  border-left: 0.9em solid rgba(2,0,36,1);
+  border-left: 0.9em solid  rgb(4, 1, 73);
   transform: skewX(-9deg);
   float: left;
   width: 60%;
@@ -166,7 +167,7 @@ form.searchInput button {
   float: left;
   width: 15%;
   padding: 17px 0;
-  background-color: rgba(2,0,36,1);;
+  background-color:  rgb(4, 1, 73);
   color: whitesmoke;
   font-size: 15px;
   border: 0;
@@ -197,7 +198,7 @@ form.searchInput::after {
   padding: 0;
   background-color: transparent;
   border: 0;
-  border-left: 0.8em solid rgba(2,0,36,1);
+  border-left: 0.8em solid  rgb(4, 1, 73);
   transform: skewX(-9deg);
   cursor: pointer;  
 }
@@ -280,7 +281,7 @@ a {
   font-weight: 400;
   background-color: transparent;
   border: 0;
-  border-left: 0.5em solid rgba(2, 0, 36, 1);;
+  border-left: 0.5em solid rgb(4, 1, 73);
   transform: skewX(-9deg);
   background-color: transparent;
   cursor: pointer;

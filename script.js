@@ -107,7 +107,7 @@ function searchKeyPersonalities(perFacet) {
   keyNYTPersonalityFetch(searchWord)
   setTimeout(() => {
     keyGuardianPersonalityFetch(searchWord)
-  }, 1000)
+  }, 100)
 }
 
 // SCROLLBAR - FUNCTION FOR THE MOST READ ARTICLES OF THE DAY, STARTING WITH THE SECOND MOST READ
@@ -205,13 +205,21 @@ function allNewsCreateDOMnodes() {
     const picture = document.createElement('img')
     picture.loading = 'lazy'
     picture.classList.add('picture')
-    if (article.fields) {
-      picture.src = article.fields.thumbnail // THE GUARDIAN SEARCH AND TOP HEADLINES
-    } else if (!article.multimedia[0].url.includes('https://')) {
-      picture.src = 'https://static01.nyt.com/' + article.multimedia[0].url // NYT SEARCH
-    } else { 
-      picture.src = article.multimedia[0].url // NYT TOP HEADLINES
-    }
+
+    // if (!article.multimedia[0].url) {
+    //   picture.src = './newspapers.jpg' 
+    // } else if (!article.multimedia[0].url.includes('https://')) {
+    //   picture.src = 'https://static01.nyt.com/' + article.multimedia[0].url // NYT SEARCH
+    // } else if (article.multimedia[0].url) { 
+    //   picture.src = article.multimedia[0].url // NYT TOP HEADLINES
+    // } else {
+    //   picture.src = article.fields.thumbnail // THE GUARDIAN SEARCH AND TOP HEADLINES
+    // }
+
+    article.fields?.thumbnail ? picture.src = article.fields.thumbnail : picture.src = './newspapers.jpg'
+    // article.multimedia[0] ? picture.src = article.multimedia[0].url : picture.src = './newspapers.jpg'
+
+    
     // ARTICLE TITLES
     const headline = document.createElement('p')
     if (article.title) {
@@ -238,8 +246,10 @@ function allNewsCreateDOMnodes() {
     // TWEET A SINGLE ARTICLE
     const twitterBtn = document.createElement('a')
     twitterBtn.classList.add('fab', 'fa-twitter', 'fa-3x', 'twitterBtn')
-    if (article.short_url) {
-      twitterBtn.setAttribute('onclick', `tweetArticle('${article.short_url}')`) // NYT TWEET
+    if (article.web_url) {
+      twitterBtn.setAttribute('onclick', `tweetArticle('${article.web_url}')`) // NYT TWEET
+    } else if (article.url) {
+      twitterBtn.setAttribute('onclick', `tweetArticle('${article.url}')`) // NYT TWEET top stories
     } else {
       twitterBtn.setAttribute('onclick', `tweetArticle('${article.webUrl}')`) // GUARDIAN TWEET
     }

@@ -1,6 +1,7 @@
 // --------------------------------------------------------------
 // APIKEY KEYS 
-
+const NYTapiKey = '&api-key=boFLW5LE0ORtGQIaE9zdumG5S4zerNcU'
+const GuardianApiKey = '&api-key=d9a93d62-0b13-4c01-b135-abc46c7bf018'
 
 // Base API URLs
 const GuardianUrl = 'https://content.guardianapis.com/search?'
