@@ -168,8 +168,10 @@ searchField.addEventListener('submit', fetchSearchWord)
 async function fetchSearchWord(e) {
   e.preventDefault()
   clearArticles()
-  GsearchWords()
   NYTsearchWords()
+  setTimeout(() => {
+    GsearchWords()
+  }, 500)
 }
 
 // --------------------------------------------------------------
