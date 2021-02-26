@@ -31,7 +31,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('green-dust-and-scratches.png');
+  background-image: url('./assets/green-dust-and-scratches.png');
   filter: brightness(90%);   
   animation: loader 10s ease-out forwards;
 }
@@ -50,7 +50,7 @@ body {
   font-weight: 300;
   font-size: 4.5em;
   color:  rgb(4, 1, 73);
-  background-image: url('green-dust-and-scratches.png');
+  background-image: url('./assets/green-dust-and-scratches.png');
 }
 
 .ml5 .text-wrapper {
@@ -115,7 +115,7 @@ body {
   align-content: center;
   margin-bottom: 0.5em;
   padding: 0em 1em;  
-  background-image: url('green-dust-and-scratches.png');
+  background-image: url('./assets/green-dust-and-scratches.png');
   border-radius: 5px;
   width: 96vw;  
   box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.2);
@@ -226,7 +226,7 @@ a {
   padding: 0em;
   border-radius: 10px;
   background-color: #f5f5f5;
-  background-image: url('green-dust-and-scratches.png');
+  background-image: url('./assets/green-dust-and-scratches.png');
   box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
 }
 
