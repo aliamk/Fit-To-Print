@@ -18,3 +18,5 @@
 
 ### The gallery shows the newspapers' 20 most popular articles - clicking on one will open the article in a new tab
 ![Most popular stories](https://github.com/aliamk/fit_to_print/blob/master/images/loader_most-popular.gif)
+
+## Biggest obstacle: the NYT API is regularly being modified... almost weekly.  This means that property names are changed and articles therefore won't generate in my app.  For example, they keep changing the property for accessing their article images: meta-data.image to metadata.thumbnail to metadata.image.
