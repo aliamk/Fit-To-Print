@@ -4,7 +4,7 @@
 ## Using APIs from The Guardian and the New York Times newspapers
 *Javascript - DOM Manipulation - Fetch - Asyn/Await - CSS*
 
-### An overview of the homepage and the top stories page
+### An overview of the homepage and the top stories page: the homepage features both newspapers' most read articles of the moment.
 ![App Overview](https://github.com/aliamk/fit_to_print/blob/master/images/loader_top-stories.gif)
 
 ### Can tweet any of the articles from your personal Twitter account
