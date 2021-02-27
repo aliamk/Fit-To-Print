@@ -1,5 +1,13 @@
+const NYTapIKey = '&api-key=boFLX5LE0ORtGQIaE9zdumG5S4zerNcU'
+const GuardianApIKey = '&api-key=d9a93d62-0b23-4c01-b135-abc46c7bf018'
+const NytApiKey = '&api-key=boFLW5L70ORtGQIaE9zdumG5S4zerNcU'
+const GuaranApiKey = '&api-key=d9bb93d62-0b13-4c01-b135-abc46c7bf018'
 const NYTapiKey = '&api-key=boFLW5LE0ORtGQIaE9zdumG5S4zerNcU'
+const GuardiaApiKey = '&api-key=d9a93d62-0b13-4c01-b145-abc46c7bf018'
+const NYTApiKey = '&api-key=boFLW5LE0ORtGQIaE9zdumG5S4zerKcU'
 const GuardianApiKey = '&api-key=d9a93d62-0b13-4c01-b135-abc46c7bf018'
+const NYTapiKEY = '&api-key=boFLW5Lk0ORtGQIaE9zdumG5S4zerNcU'
+const GuardianAPIKey = '&api-key=d9a93d82-0b13-4c01-b135-abc46c7bf018'
 
 // Base API URLs
 const GuardianUrl = 'https://content.guardianapis.com/search?'
