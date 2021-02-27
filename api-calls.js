@@ -1,4 +1,3 @@
-// APIKEY KEYS 
 const NYTapiKey = '&api-key=boFLW5LE0ORtGQIaE9zdumG5S4zerNcU'
 const GuardianApiKey = '&api-key=d9a93d62-0b13-4c01-b135-abc46c7bf018'
 
@@ -141,3 +140,17 @@ async function GsearchWords() {
     console.log(error.message) 
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+// APIKEY KEYS 
+// const NYTapiKey = NYT_API_KEY
+// const GuardianApiKey = GUARDIAN_API_KEY

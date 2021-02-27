@@ -177,6 +177,7 @@ async function fetchSearchWord(e) {
 // --------------------------------------------------------------
 // CREATE TOP STORY DOM NODES
 function allNewsCreateDOMnodes() {
+  console.log('headlines: ', headlinesArray)
   headlinesArray.forEach((article, i) => {
     // console.log('headlinesArray: ', headlinesArray)
     const newsItem = document.createElement('div')
@@ -207,21 +208,15 @@ function allNewsCreateDOMnodes() {
     const picture = document.createElement('img')
     picture.loading = 'lazy'
     picture.classList.add('picture')
-
-    // if (!article.multimedia[0].url) {
-    //   picture.src = './images/newspapers.png' 
-    // } else if (!article.multimedia[0].url.includes('https://')) {
-    //   picture.src = 'https://static01.nyt.com/' + article.multimedia[0].url // NYT SEARCH
-    // } else if (article.multimedia[0].url) { 
-    //   picture.src = article.multimedia[0].url // NYT TOP HEADLINES
-    // } else {
-    //   picture.src = article.fields.thumbnail // THE GUARDIAN SEARCH AND TOP HEADLINES
-    // }
-
-    article.fields?.thumbnail ? picture.src = article.fields.thumbnail : picture.src = './images/newspapers.png'
-    // article.multimedia[0] ? picture.src = article.multimedia[0].url : picture.src = './images/newspapers.png'
-
-    
+    // // } else if (!article.multimedia[0].url.includes('https://')) {
+    // //   picture.src = 'https://static01.nyt.com/' + article.multimedia[0].url // NYT SEARCH
+    if (article.fields) { 
+      picture.src = article.fields.thumbnail // NYT TOP HEADLINES
+    } else if (article.multimedia[0].url) {
+      picture.src = article.multimedia[0].url 
+    } else {      
+      picture.src = './images/newspapers.png'
+    }
     // ARTICLE TITLES
     const headline = document.createElement('p')
     if (article.title) {
