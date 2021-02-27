@@ -20,3 +20,7 @@
 ![Most popular stories](https://github.com/aliamk/fit_to_print/blob/master/images/loader_most-popular.gif)
 
 #### **Biggest obstacle:** the NYT API is regularly being modified... almost weekly.  This means that property names are changed and articles generate with broken links or missing images etc.  For example, they keep changing the property for accessing their article images: meta-data.image to metadata.thumbnail to metadata.image.
+
+Post-MVP plans:
+1. Responsive design - want to make the layout work well on all screen sizes and browsers - currently it looks best in Chrome and sizes +900px
+1. Modular Programming - look at ways to refactor the code to make it more readable, shorter and reusable
