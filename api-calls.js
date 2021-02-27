@@ -1,3 +1,7 @@
+// API Keys
+const GuardianApiKey = config.GUARDIAN_API_KEY
+const NYTapiKey = config.NYT_API_KEY
+
 // Base API URLs
 const GuardianUrl = 'https://content.guardianapis.com/search?'
 const GuardianFields = '&show-fields=thumbnail&page-size=20'
@@ -6,14 +10,14 @@ const NYTurl = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?q='
 const NYTfields = '&limit=20&'
 
 // SEARCH KEYWORDS API URL
-const NYTapiUrl = `https://api.nytimes.com/svc/topstories/v2/politics.json?${config.config.NYT_API_KEY}`
-const GuardianApiUrl = `https://content.guardianapis.com/search?order-by=newest&show-fields=thumbnail&page-size=20${config.GUARDIAN_API_KEY}`
+const NYTapiUrl = `https://api.nytimes.com/svc/topstories/v2/politics.json?${NYTapiKey}`
+const GuardianApiUrl = `https://content.guardianapis.com/search?order-by=newest&show-fields=thumbnail&page-size=20${GuardianApiKey}`
 
 // THE DAY'S MOST READ
-const GmostReadUrl = `https://content.guardianapis.com/uk?show-most-viewed=true&show-fields=thumbnail${config.GUARDIAN_API_KEY}`
-const NYTmostReadUrl = `https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?${config.NYT_API_KEY}`
-const NYTmostFB = `https://api.nytimes.com/svc/mostpopular/v2/shared/1/facebook.json?${config.NYT_API_KEY}`
-const NYTmostEmailed = `https://api.nytimes.com/svc/mostpopular/v2/emailed/1.json?${config.NYT_API_KEY}`
+const GmostReadUrl = `https://content.guardianapis.com/uk?show-most-viewed=true&show-fields=thumbnail${GuardianApiKey}`
+const NYTmostReadUrl = `https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?${NYTapiKey}`
+const NYTmostFB = `https://api.nytimes.com/svc/mostpopular/v2/shared/1/facebook.json?${NYTapiKey}`
+const NYTmostEmailed = `https://api.nytimes.com/svc/mostpopular/v2/emailed/1.json?${NYTapiKey}`
 
 const proxyUrl = 'https://cors-anywhere.herokuapp.com/'
 
@@ -87,7 +91,7 @@ async function keyNYTPersonalityFetch(searchWord) {
   try { 
     const NYsearchValue = `${searchWord}`
     console.log('NYsearchValue: ', NYsearchValue)
-    const response = await fetch(`${NYTurl}${NYsearchValue}${NYTfields}${config.NYT_API_KEY}`)
+    const response = await fetch(`${NYTurl}${NYsearchValue}${NYTfields}${NYTapiKey}`)
     const data = await response.json()
     headlinesArray = data.response.docs
     console.log('NYT_perFacet: ', headlinesArray)
@@ -101,7 +105,7 @@ async function keyNYTPersonalityFetch(searchWord) {
 async function keyGuardianPersonalityFetch(searchWord) {
   try {
     let searchValue = 'q=' + `${searchWord}`
-    const response = await fetch(`${GuardianUrl}${searchValue}${GuardianFields}${config.GUARDIAN_API_KEY}`)
+    const response = await fetch(`${GuardianUrl}${searchValue}${GuardianFields}${GuardianApiKey}`)
     const data = await response.json()
     headlinesArray = data.response.results
     console.log('Guardian_perFacet: ', headlinesArray)
@@ -115,7 +119,7 @@ async function keyGuardianPersonalityFetch(searchWord) {
 async function NYTsearchWords() {
   try {    
     const NYsearchValue = `${searchWord.value}`
-    const response = await fetch(`${NYTurl}${NYsearchValue}${NYTfields}${config.NYT_API_KEY}`)
+    const response = await fetch(`${NYTurl}${NYsearchValue}${NYTfields}${NYTapiKey}`)
     const data = await response.json()
     headlinesArray = data.response.docs
     allNewsCreateDOMnodes()
@@ -128,7 +132,7 @@ async function NYTsearchWords() {
 async function GsearchWords() {
   try {
     let searchValue = 'q=' + `${searchWord.value}`
-    const response = await fetch(`${GuardianUrl}${searchValue}${GuardianFields}${config.GUARDIAN_API_KEY}`)
+    const response = await fetch(`${GuardianUrl}${searchValue}${GuardianFields}${GuardianApiKey}`)
     const data = await response.json()
     headlinesArray = data.response.results
     console.log(headlinesArray)
