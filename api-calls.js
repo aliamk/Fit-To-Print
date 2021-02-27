@@ -1,3 +1,5 @@
+import config from "./config"
+
 // API Keys
 const GuardianApiKey = config.GUARDIAN_API_KEY
 const NYTapiKey = config.NYT_API_KEY
