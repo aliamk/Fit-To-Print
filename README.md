@@ -15,3 +15,6 @@
 
 ### Users can search both APIs with the same keyword or name at the same time
 ![App Search](https://github.com/aliamk/fit_to_print/blob/master/images/loader_search.gif)
+
+### The gallery shows the newspapers 20 most popular articles - clicking on one will open the article in a new tab
+![Most popular stories](https://github.com/aliamk/fit_to_print/blob/master/images/loader_most-popular.gif)
