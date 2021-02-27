@@ -1,5 +1,5 @@
-
+node_modules
+.env
 api_calls.js
 alt_api_Calls.js
-/alt_api_Calls
-/api_calls
+

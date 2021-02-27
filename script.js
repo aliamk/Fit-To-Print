@@ -59,17 +59,17 @@ function singleMostReadArticleDOMnodes() {
   } else if (mostReadArticlesArray[0].media[0]) {
     singleMostReadPicture.src = mostReadArticlesArray[0].media[0]['media-metadata'][2].url
   } else {
-    singleMostReadPicture.src = './assets/newspapers.jpg'
+    singleMostReadPicture.src = './images/newspapers.png'
   }
   // COMPANY LOGOS
   const logo = document.createElement('img')
   logo.classList.add('overlay-logo')
   logo.loading = 'lazy'
   if (mostReadArticlesArray[0].webUrl) {
-    logo.src = './assets/the-guardian.png'
+    logo.src = './images/the-guardian.png'
     logo.alt = 'The Guardian Logo'
   } else {
-    logo.src = './assets/NYTimesLogo.png'
+    logo.src = './images/NYTimesLogo.png'
     logo.alt = 'New York Times Logo' 
   }
   // CONNECT ALL DOM NODES
@@ -107,7 +107,7 @@ function searchKeyPersonalities(perFacet) {
   keyNYTPersonalityFetch(searchWord)
   setTimeout(() => {
     keyGuardianPersonalityFetch(searchWord)
-  }, 100)
+  }, 500)
 }
 
 // SCROLLBAR - FUNCTION FOR THE MOST READ ARTICLES OF THE DAY, STARTING WITH THE SECOND MOST READ
@@ -186,10 +186,10 @@ function allNewsCreateDOMnodes() {
     logo.classList.add('logo')
     logo.loading = 'lazy'
     if (article.url || article.web_url) {
-      logo.src = './assets/NYTimesLogo.png'
+      logo.src = './images/NYTimesLogo.png'
       logo.alt = 'New York Times Logo' // If image doesn't load, this message will display
     } else {
-      logo.src = './assets/the-guardian.png'
+      logo.src = './images/the-guardian.png'
       logo.alt = 'The Guardian Logo'
     }
     // LINK TO ARTICLES
@@ -209,7 +209,7 @@ function allNewsCreateDOMnodes() {
     picture.classList.add('picture')
 
     // if (!article.multimedia[0].url) {
-    //   picture.src = './assets/newspapers.jpg' 
+    //   picture.src = './images/newspapers.png' 
     // } else if (!article.multimedia[0].url.includes('https://')) {
     //   picture.src = 'https://static01.nyt.com/' + article.multimedia[0].url // NYT SEARCH
     // } else if (article.multimedia[0].url) { 
@@ -218,8 +218,8 @@ function allNewsCreateDOMnodes() {
     //   picture.src = article.fields.thumbnail // THE GUARDIAN SEARCH AND TOP HEADLINES
     // }
 
-    article.fields?.thumbnail ? picture.src = article.fields.thumbnail : picture.src = './assets/newspapers.jpg'
-    // article.multimedia[0] ? picture.src = article.multimedia[0].url : picture.src = './assets/newspapers.jpg'
+    article.fields?.thumbnail ? picture.src = article.fields.thumbnail : picture.src = './images/newspapers.png'
+    // article.multimedia[0] ? picture.src = article.multimedia[0].url : picture.src = './images/newspapers.png'
 
     
     // ARTICLE TITLES
