@@ -209,7 +209,7 @@ function allNewsCreateDOMnodes() {
     picture.classList.add('picture')
     if (article.fields) {
       picture.src = article.fields.thumbnail
-    } else if (!article.multimedia[0].url) {
+    } else if (!article.multimedia[0]) {
       picture.src = './images/newspapers.png' 
     } else if (!article.multimedia[0].url.includes('https://')) {
       picture.src = 'https://static01.nyt.com/' + article.multimedia[0].url // NYT SEARCH
