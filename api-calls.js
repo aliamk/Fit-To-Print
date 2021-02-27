@@ -148,17 +148,3 @@ async function GsearchWords() {
     console.log(error.message) 
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-// APIKEY KEYS 
-// const NYTapiKey = NYT_API_KEY
-// const GuardianApiKey = GUARDIAN_API_KEY
